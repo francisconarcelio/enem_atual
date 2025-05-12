@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: agei-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: serve -s dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://agei-backend.onrender.com 
